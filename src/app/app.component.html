@@ -1,1 +1,16 @@
+<form [formGroup]="form">  
+            
+    <div class="form-group">  
+        <label for="language">language:</label>  
+        <select formControlName="language" class="form-control" (change)="changeLanguage($event)">  
+            <option disabled>Select language</option>  
+            <option>Choose language</option>  
+            <option *ngFor="let web of languages">{{web}}</option>  
+        </select>  
+        <div *ngIf="f.language.touched && f.language.invalid" class="alert alert-danger">  
+            <div *ngIf="f.language.errors">Name is required.</div>  
+        </div>  
+    </div>  
+</form>
+
 {{ 'message' | i18next }}!

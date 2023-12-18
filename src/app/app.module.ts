@@ -1,4 +1,5 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { NgModule, APP_INITIALIZER, LOCALE_ID } from '@angular/core';
 import { I18NextModule, ITranslationService, I18NEXT_SERVICE, I18NextTitle, defaultInterpolationFormat } from 'angular-i18next';
 import { AppRoutingModule } from './app-routing.module';
@@ -79,6 +80,8 @@ export const I18N_PROVIDERS = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,  
+    ReactiveFormsModule  ,
     AppRoutingModule,
     I18NextModule.forRoot()
   ],
